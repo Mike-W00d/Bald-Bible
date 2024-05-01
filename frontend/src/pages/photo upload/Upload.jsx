@@ -19,7 +19,7 @@ const Upload = ({ navigate }) => {
     });
     setTimeout(() => {
       navigate("/");
-    }, 2500);
+    }, 1000);
   };
 
   useEffect(() => {
