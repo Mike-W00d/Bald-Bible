@@ -2,8 +2,17 @@ const express = require('express');
 const mongoose = require('mongoose'); 
 const path = require('path'); // import path module, to deal with file paths
 const cors = require('cors');
-const { password }  = require('./config'); // import the password property of the object exported from config.js
+
 // the password in config.js is the password for the user pablojoyce, which has read and write access to the database
+let password; 
+try { 
+  // try using the local config
+  const localConfig = require('./config');
+  password = localConfig.password;;
+} catch (error) {
+  // if local config unavailable, use enviroment variables
+  password = process.env.REACT_APP_DB_PASSWORD;
+}
 
 const imageRoutes = require('./routes/image'); // import the router object, which is exported from stuff.js
 const userRoutes = require('./routes/user'); // import the router object, which is exported from user.js
@@ -23,13 +32,14 @@ app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
 const dbname = process.env.MONGO_URL || 'baldbible'
 
-mongoose.connect(`mongodb+srv://team3-baldbible:${password}@bald-bible-database.vqxy3e3.mongodb.net/${dbname}?retryWrites=true&w=majority`)
+// mongoose.connect(`mongodb+srv://team3-baldbible:${password}@bald-bible-database.vqxy3e3.mongodb.net/${dbname}?retryWrites=true&w=majority`)
+mongoose.connect(`mongodb+srv://mgwood22:${password}@bald-bible.is3dygf.mongodb.net/?retryWrites=true&w=majority&appName=bald-bible`)
 
   .then(() => { // call the then method, which adds a callback function to the promise, to handle the success case
     console.log('Successfully connected to MongoDB Atlas!'); // log a message to the console
   })
   .catch((error) => { // call the catch method, which adds a callback function to the promise, to handle the failure case
-    console.log('Unable to connect to MongoDB Atlas!'); // log a message to the console
+    console.log('Unable to connect to MongoDB Atlas!', error.message); // log a message to the console
     console.error(error); // log the error to the console
   });
   

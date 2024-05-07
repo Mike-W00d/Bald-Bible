@@ -1,11 +1,22 @@
 const cloudinary = require('cloudinary').v2; 
 const config = require('../config')
 
+let cloudinaryConfig; 
 
+try { 
+  cloudinaryConfig = require('../config')
+} catch (error) {
+  // if local config unavailable, use enviroment variables 
+  cloudinaryConfig = {
+    cloud_name: process.env.REACT_APP_CLOUD_NAME,
+    api_key: process.env.REACT_APP_CLOUD_KEY,
+    api_secret: process.env.REACT_APP_CLOUD_SECRET
+  }; 
+}
 cloudinary.config({
-  cloud_name: config.CLOUD_NAME,
-  api_key: config.CLOUD_KEY,
-  api_secret: config.CLOUD_SECRET,
+  cloud_name: cloudinaryConfig.CLOUD_NAME,
+  api_key: cloudinaryConfig.CLOUD_KEY,
+  api_secret: cloudinaryConfig.CLOUD_SECRET,
   secure: true
 });
 
