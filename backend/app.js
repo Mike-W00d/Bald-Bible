@@ -39,7 +39,7 @@ mongoose.connect(`mongodb+srv://mgwood22:${password}@bald-bible.is3dygf.mongodb.
     console.log('Successfully connected to MongoDB Atlas!'); // log a message to the console
   })
   .catch((error) => { // call the catch method, which adds a callback function to the promise, to handle the failure case
-    console.log('Unable to connect to MongoDB Atlas!'); // log a message to the console
+    console.log('Unable to connect to MongoDB Atlas!', error.message); // log a message to the console
     console.error(error); // log the error to the console
   });
   
