@@ -32,7 +32,8 @@ app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
 const dbname = process.env.MONGO_URL || 'baldbible'
 
-mongoose.connect(`mongodb+srv://team3-baldbible:${password}@bald-bible-database.vqxy3e3.mongodb.net/${dbname}?retryWrites=true&w=majority`)
+// mongoose.connect(`mongodb+srv://team3-baldbible:${password}@bald-bible-database.vqxy3e3.mongodb.net/${dbname}?retryWrites=true&w=majority`)
+mongoose.connect(`mongodb+srv://mgwood22:${password}@bald-bible.is3dygf.mongodb.net/?retryWrites=true&w=majority&appName=bald-bible`)
 
   .then(() => { // call the then method, which adds a callback function to the promise, to handle the success case
     console.log('Successfully connected to MongoDB Atlas!'); // log a message to the console

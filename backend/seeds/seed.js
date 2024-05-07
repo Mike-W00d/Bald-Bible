@@ -9,9 +9,9 @@ const bcrypt = require("bcrypt");
 
 const mongoDbUrl =
   process.env.mongoDbUrl ||
-  `mongodb+srv://team3-baldbible:${password}@bald-bible-database.vqxy3e3.mongodb.net/baldbible?retryWrites=true&w=majority`;
+  `mongodb+srv://mgwood22:${password}@bald-bible.is3dygf.mongodb.net/?retryWrites=true&w=majority&appName=bald-bible`;
 
-// Hash all user passwords
+// Hash all user passwordsn
 const hashPasswords = async (users) => {
   const saltRounds = 10;
   for (let user of users) {
@@ -61,6 +61,7 @@ const seedDB = async () => {
   try {
     await resetDB();
     await insertUsers();
+    await insertImages();
     console.log("Seed completed successfully.");
   } catch (error) {
     console.error("Seed failed:", error);
