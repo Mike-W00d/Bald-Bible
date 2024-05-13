@@ -16,6 +16,25 @@ Myself and a couple of my team presenting the tech functionality demo linked bel
 
 [![Video](https://img.youtube.com/vi/aNzYTEQ8lqk/0.jpg)](https://www.youtube.com/watch?v=aNzYTEQ8lqk)
 
+# Project Timeline
+
+## Planning 
+
+As a team we quickly agreed upon using the MERN stack, this was because we all had experiance building using the stack but there were still plenty of learning oppotunities and optimisations we could do by creating another project in the same stack especially as we had a limited timeline. 
+
+Once decided between ourselves on building the Bald Bible when then had to decide what functionality we hoped to achive and what MVP of Bald Bible looked like. To do this we created user stories of what as a user we wanted to be able to achieve on the site. Using the user stories we then created wire frame pages of what we wanted the site to look like and from this drew up a component tree using Excalidraw. 
+
+![image](https://github.com/Mike-W00d/Bald-Bible/assets/142504641/f5b001ab-6a6f-4c98-a5d9-ba17e17dc7fd)
+
+As a team we followed AGILE working principles and used a trello board to break down the tasks which needed doing and make sure we got the most out of each sprint. This also made sure each team member knew what tasks to needed completing and we were able to track the progress we were making.  
+
+![image](https://github.com/Mike-W00d/Bald-Bible/assets/142504641/081149ec-d75c-4266-bc98-56ff891b4fc8)
+
+
+## Project Setup 
+
+We used a MERN template 
+
 ## Run Bald Bible in dev mode
 Start the frontend and backend servers together.
 ```
