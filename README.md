@@ -1,4 +1,8 @@
 # Bald Bible
+# Project Overview 
+- 8 days to MVP
+- Main Language: Javascript - React frontend & Node.js Backend
+- 
 
 ## Run Bald Bible in dev mode
 Start the frontend and backend servers together.
