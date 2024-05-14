@@ -31,9 +31,39 @@ As a team we followed AGILE working principles and used a trello board to break 
 ![image](https://github.com/Mike-W00d/Bald-Bible/assets/142504641/081149ec-d75c-4266-bc98-56ff891b4fc8)
 
 
-## Project Setup 
+## My Responsiblities
 
-We used a MERN template 
+- Converting our user stories and wireframe component tree into managable trello tickets with an accurate time estimate for each.
+- Seting up the MongoDB database model classes and creating a seed script to put test data into the database.
+- Configuring Cloudinary to resize uploaded images to make it easier to get the correct pintrest stlye look on the UI.
+- The routing to send the image data from the UI to the backend and upload it into cloudinary.
+- Creating the image controller to create new Image instances for each upload and then storing user and image data into the MongoDB database.
+- Using Bycrypt to Hash all user passwords in the database for user security.
+- Project managing - we rotated the responsibility to lead standups/retros between the group throughout the project.
+- Locking the Upload page so only logged in users can upload images to the site.
+- Pair programming with team members to help with CSS styling on the frontend and debugging.
+
+## Achived MVP 
+
+- Login: Must be unique email and correct password
+- Signup: All fields must be completed, email must be correct format, password must be certain length and contain special character
+- Password Security: Passwords are bcrypt hashed on signup before being stored in database
+- Dynamic page elements - buttons, login/signup, Feed Page
+- Image Feed - Each picture is clickable to see content
+- Security - User cannot comment/like without being logged in
+- Responsive - Whole web app is responsive to different screen sizes
+- Image Upload - Cloudinary Image upload and storage, images automatically display on the feed on upload
+- Comments - conditionally render on button click, can also be deleted if user matches comment UserI
+- Likes - User can like/unlike an image
+- Testing - Test database setup and connected, frontend and api tests in place
+
+## Challenges/ What I learned 
+
+### Image Upload 
+
+This was the first time any of us on the team had working with handling images. I took charge of the ticket for image upload as I knew for us to acheive MVP before the demo day having a relient and fast way of handling images would be essential. I knew I wanted to try out a cloud store for our images and after some research online I found cloudinary was a fast and free way of storing images for the project and it also had good SDK documentation I could work from. 
+
+
 
 ## Run Bald Bible in dev mode
 Start the frontend and backend servers together.
